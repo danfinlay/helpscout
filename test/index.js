@@ -49,7 +49,7 @@ describe('helpscout', function () {
     describe('#get', function () {
       it('should be able to get a conversation', function (done) {
         var mailbox = Helpscout(apiKey, mailboxId);
-        mailbox.conversations.get({ id: config.conversationId }, function (err, res) {
+        mailbox.conversations.get({ id: conversationId }, function (err, res) {
           if (err) return done(err);
           assert(res);
           assert(typeof res.item === 'object')
